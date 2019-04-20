@@ -9,4 +9,7 @@
     <Tab text="GCD">
         <fx:include source="GCD.fxml"/>
     </Tab>
+    <Tab text="Perfect numbers">
+        <fx:include source="perfect_numbers.fxml"/>
+    </Tab>
 </TabPane>
