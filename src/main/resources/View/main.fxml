@@ -12,4 +12,7 @@
     <Tab text="Perfect numbers">
         <fx:include source="perfect_numbers.fxml"/>
     </Tab>
+    <Tab text="PESEL">
+        <fx:include source="pesel.fxml" />
+    </Tab>
 </TabPane>
