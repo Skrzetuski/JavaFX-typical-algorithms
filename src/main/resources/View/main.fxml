@@ -15,4 +15,7 @@
     <Tab text="PESEL">
         <fx:include source="pesel.fxml" />
     </Tab>
+    <Tab text="Height Map">
+        <fx:include source="height_map.fxml" />
+    </Tab>
 </TabPane>
