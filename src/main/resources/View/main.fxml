@@ -18,4 +18,7 @@
     <Tab text="Height Map">
         <fx:include source="height_map.fxml" />
     </Tab>
+    <Tab text="Bubble sort">
+        <fx:include source="bubble_sort.fxml" />
+    </Tab>
 </TabPane>
