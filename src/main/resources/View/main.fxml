@@ -24,4 +24,7 @@
     <Tab text="Fibonacci">
         <fx:include source="fib.fxml" />
     </Tab>
+    <Tab text="Negative Photo">
+        <fx:include source="negative.fxml" />
+    </Tab>
 </TabPane>
