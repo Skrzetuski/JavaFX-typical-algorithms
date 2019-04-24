@@ -21,4 +21,7 @@
     <Tab text="Bubble sort">
         <fx:include source="bubble_sort.fxml" />
     </Tab>
+    <Tab text="Fibonacci">
+        <fx:include source="fib.fxml" />
+    </Tab>
 </TabPane>
