@@ -17,6 +17,10 @@ public class EulersController implements IEulers {
         showAlertAndWait(euler5().toString());
     }
 
+    public void showEuler14(){
+        showAlertAndWait(euler14());
+    }
+
     private void showAlertAndWait(String header) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(header);

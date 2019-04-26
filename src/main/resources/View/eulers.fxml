@@ -13,6 +13,6 @@
       <Label layoutX="433.0" layoutY="242.0" text="Euler 5" />
       <Button onAction="#showEuler5" layoutX="429.0" layoutY="267.0" mnemonicParsing="false" text="Show" />
       <Label layoutX="623.0" layoutY="242.0" text="Euler 14" />
-      <Button layoutX="624.0" layoutY="267.0" mnemonicParsing="false" text="Show" />
+      <Button onAction="#showEuler14" layoutX="624.0" layoutY="267.0" mnemonicParsing="false" text="Show" />
    </children>
 </Pane>

@@ -9,7 +9,7 @@ public interface IEulers {
     /**
      * https://projecteuler.net/problem=1
      *
-     * @return Integer - sum of all multiples of 3 or 5 below 1_000
+     * @return sum of all multiples of 3 or 5 below 1_000
      */
     default Integer euler1() {
         return IntStream.range(0, 1000).filter(i -> i % 3 == 0 || i % 5 == 0).sum();
@@ -18,7 +18,7 @@ public interface IEulers {
     /**
      * https://projecteuler.net/problem=4
      *
-     * @return Integer - largest palindrome from two 3-digit numbers
+     * @return largest palindrome from two 3-digit numbers
      */
     default Integer euler4() {
         Integer max = 0;
@@ -40,9 +40,10 @@ public interface IEulers {
     }
 
     /**
+     * The smallest positive number that is evenly divisible by all of the numbers from 1 to 20.
      * https://projecteuler.net/problem=5
      *
-     * @return Long - The smallest positive number that is evenly divisible by all of the numbers from 1 to 20
+     * @return smallestNumber
      */
     default Long euler5() {
         Long smallestNumber = 2520L;
@@ -67,7 +68,38 @@ public interface IEulers {
         return smallestNumber;
     }
 
+    /**
+     * Longest Collatz sequence
+     * https://projecteuler.net/problem=14
+     *
+     * @return The number and length of chain
+     */
     default String euler14() {
-        return null;
+        Long chainStartNumber = 0L;
+        Long chainLengthMax = 0L;
+        Long number = 0L;
+        Long length = 0L;
+
+        for (long i = 2; i < 1_000_000; i++) {
+
+            length = 1L;
+            number = i;
+            while (number != 1) {
+                if (number % 2 == 0) {
+                    number = number / 2;
+                } else {
+                    number = number * 3 + 1;
+                }
+                length++;
+            }
+
+            if (length > chainLengthMax) {
+                chainLengthMax = length;
+                chainStartNumber = i;
+            }
+        }
+        return new StringBuilder("Number ").append(chainStartNumber)
+                                           .append(" generate chain length equals to ")
+                                           .append(chainLengthMax).toString();
     }
 }
