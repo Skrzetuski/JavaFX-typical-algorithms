@@ -27,4 +27,7 @@
     <Tab text="Negative Photo">
         <fx:include source="negative.fxml" />
     </Tab>
+    <Tab text="Eulers">
+        <fx:include source="eulers.fxml" />
+    </Tab>
 </TabPane>
