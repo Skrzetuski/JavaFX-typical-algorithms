@@ -28,8 +28,13 @@ public abstract class AbstractProcessingImage {
 
     private final FileChooser fileChooser = new FileChooser();
 
+    private final FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("PNG image","*.png");
+
+    private static final String EXT = ".png";
+
     protected void selectPicture() {
         selectImageButton.setOnAction(actionEvent -> {
+            fileChooser.getExtensionFilters().add(extFilter);
             File file = fileChooser.showOpenDialog(selectImageButton.getScene().getWindow());
             if (file != null && file.getName().endsWith(".png")) {
                 Image image = new Image(file.toURI().toString());
@@ -40,7 +45,8 @@ public abstract class AbstractProcessingImage {
     }
 
     protected void saveImage(String outputNameFile) {
-        File outputFile = new File(outputNameFile);
+        StringBuilder finalNameFile = new StringBuilder(outputNameFile).append(EXT);
+        File outputFile = new File(finalNameFile.toString());
         try {
             ImageIO.write(SwingFXUtils.fromFXImage(afterImageView.getImage(), null), "png", outputFile);
             logger.info("The image has been saved");
