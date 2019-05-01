@@ -62,27 +62,27 @@ public class HeightMapController extends AbstractProcessingImage implements Init
 
             for (int j = 0; j < height; j++) {
 
-                double x = image.getPixelReader().getColor(i, j).getBrightness();
+                double brightness = image.getPixelReader().getColor(i, j).getBrightness();
 
-                if (x < 0.15) {
+                if (brightness < 0.15) {
                     pixelWriter.setColor(i, j, Color.DARKBLUE);
                 }
-                if (x < 0.40 && x > 0.15) {
+                if (brightness < 0.40 && brightness > 0.15) {
                     pixelWriter.setColor(i, j, Color.BLUE);
                 }
-                if (x < 0.150 && x > 0.40) {
+                if (brightness < 0.150 && brightness > 0.40) {
                     pixelWriter.setColor(i, j, Color.WHEAT);
                 }
-                if (x < 0.250 && x > 0.150) {
+                if (brightness < 0.250 && brightness > 0.150) {
                     pixelWriter.setColor(i, j, Color.OLIVE);
                 }
-                if (x < 0.450 && x > 0.250) {
+                if (brightness < 0.450 && brightness > 0.250) {
                     pixelWriter.setColor(i, j, Color.DARKOLIVEGREEN);
                 }
-                if (x < 0.600 && x > 0.450) {
+                if (brightness < 0.600 && brightness > 0.450) {
                     pixelWriter.setColor(i, j, Color.SILVER);
                 }
-                if (x > 0.600) {
+                if (brightness > 0.600) {
                     pixelWriter.setColor(i, j, Color.WHITE);
                 }
             }
